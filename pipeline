@@ -1,0 +1,47 @@
+//# Goal: This is demo pipeline
+
+//# Author : Ankur
+
+pipeline{
+
+	agent{
+
+		node {
+
+			label 'master'
+
+		        }
+
+         }
+
+
+
+	stages {
+
+		stage ('this is stage 1') {
+
+		steps{
+
+			echo " step 1"
+
+		}
+
+		}
+
+		stage (' this is sage 2') {
+
+		steps {
+
+		 sh """
+
+		 df -h
+
+		 """
+
+		}
+
+		}
+
+	       }
+
+          }
